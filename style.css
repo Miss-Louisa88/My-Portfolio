@@ -1,0 +1,110 @@
+:root {
+  --branding-color: green;
+  --secondary-color: rgb(193, 221, 136);
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
+}
+.portfolio {
+  text-align: center;
+  padding: 160px 20px;
+  max-width: 120%;
+  background-color: var(--secondary-color);
+}
+.portfolio p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: #272142;
+}
+.portfolio h1 {
+  font-size: 96px;
+  color: black;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+}
+.portfolio h2 {
+  font-family: var(--heading-font-family);
+  font-weight: normal;
+  line-height: 2;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 5px;
+}
+.button {
+  background: var(--branding-color);
+  border-radius: 4px;
+  color: var(--secondary-color);
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  box-shadow: 1px solid rgb(17, 80, 17);
+  transition: ease-in-out;
+}
+.container {
+  padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.project-description h2 {
+  font-size: 64px;
+  font-weight: bold;
+  font-family: var(--heading-font-family);
+  text-align: center;
+}
+.special {
+  font-size: 64px;
+  font-weight: bold;
+  font-family: var(--heading-font-family);
+  text-align: center;
+}
+.project-desciption {
+  padding: 120px 60px;
+}
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: var(--default-font-family);
+}
+.btn-primary {
+  display: inline-block;
+  margin: 0 auto;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--secondary-color);
+  border: 0.5px solid var(--branding-color);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: ease-in-out;
+}
+.btn-branding-outline {
+  color: var(--branding-color);
+  border: 1px solid var(--branding-color);
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 30px;
+}
+.btn-primary:hover {
+  background: var(--branding-color);
+  color: var(--secondary-color);
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
