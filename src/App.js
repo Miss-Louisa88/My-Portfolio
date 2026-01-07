@@ -1,56 +1,74 @@
+import React from "react";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <nav>Home</nav>
-        <nav>About</nav>
-        <nav>Projects</nav>
-        <nav>Contact</nav>
-        <nav>
-          {" "}
-          <button>Download CV</button>
+      {/* ================= NAVBAR ================= */}
+      <header className="navbar">
+        <h3 className="logo">LuiDev</h3>
+
+        <nav className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
+
+        <button className="btn">Download CV</button>
       </header>
-      <section>
+
+      {/* ================= HERO ================= */}
+      <section className="hero">
         <div className="description">
           <h1>Louise Adera</h1>
-          <h2> Fullstack Developer</h2>
+          <h2>Full-Stack Developer</h2>
           <p>
             Full-Stack Developer with 4+ years of experience (3+ in frontend, 1+
-            in full-stack) building scalable, user-focused web applications. I
-            specialize in React, JavaScript, and responsive UI development, with
-            backend experience in Node.js, Express, REST APIs, and Firebase.
-            I’ve worked in Agile teams, translated Figma designs into
-            production-ready interfaces, and delivered measurable improvements
-            in performance, user retention, and development efficiency.
+            in full-stack) building scalable, user-focused web applications.
+            Specializing in React, JavaScript, and responsive UI development,
+            with backend experience in Node.js, Express, REST APIs, and Firebase.
           </p>
           <div className="cta_buttons">
-            <button>View Projects</button>
-            <button>Download CV</button>
+            <button className="primary">View Projects</button>
+            <button className="secondary">Download CV</button>
           </div>
         </div>
         <div className="profile_photo">
-          <img src="/images/LuiDev.jpg" width="400px" />
+          <img src="/images/LuiDev.jpg" alt="Louise Adera profile" />
         </div>
       </section>
-      <section classsName="skills">
+
+      {/* ================= SKILLS ================= */}
+      <section className="skills">
         <h2>Skills</h2>
-        <p>Building interactive and responsive web interfaces...</p>
-        <div className="frontend">React, Javascript,htmls/css...</div>
-        <div className="backend"> eXPREESS, nODE. ETC...</div>
-        <div className="tools"> Git,github, testing ibrary etc...</div>
-      </section>
-      <section className="faetured_projects">
-        <h2>Featured Projects</h2>
-        <div className="projects">
-          <ul>
-            <li>Use card for React Weather Project</li>
-            <li> Use card for Littlle Lemon Restaurant app</li>
-            <li> Use card for Louuisa bOUTIQE Landing Page</li>
-          </ul>
+        <p>Building interactive and responsive web interfaces</p>
+
+        <div className="skills-grid">
+          <div className="skill-card">
+            <h4>Frontend</h4>
+            <p>React, JavaScript, HTML, CSS, Bootstrap</p>
+          </div>
+          <div className="skill-card">
+            <h4>Backend</h4>
+            <p>Node.js, Express, REST APIs, Firebase</p>
+          </div>
+          <div className="skill-card">
+            <h4>Tools</h4>
+            <p>Git, GitHub, Testing Library, Agile</p>
+          </div>
         </div>
+      </section>
+
+      {/* ================= FEATURED PROJECTS ================= */}
+      <section className="featured_projects">
+        <h2>Featured Projects</h2>
+        <div className="projects-grid">
+          <div className="project-card">React Weather App</div>
+          <div className="project-card">Little Lemon Restaurant App</div>
+          <div className="project-card">Louisa Boutique Landing Page</div>
+        </div>
+        <button className="btn secondary view-all">View All Projects</button>
       </section>
     </div>
   );
