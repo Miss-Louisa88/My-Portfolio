@@ -14,7 +14,13 @@ function Navbar() {
         <Link to="/">Contact</Link>
       </nav>
 
-      <button className="btn">Download CV</button>
+      <a
+        href="C:\Users\Louisa Guda\OneDrive\Desktop\MY RESUMES\MY RESUMES\2026 Software Engineer\Louise Adera_Software Engineer Resume.pdf"
+        download
+        className="btn"
+      >
+        Download CV
+      </a>
     </header>
   );
 }

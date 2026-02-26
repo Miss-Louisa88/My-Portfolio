@@ -152,8 +152,18 @@ header .btn:hover {
 .profile_photo img {
   width: 100%;
   max-width: 380px;
-  border-radius: 24px;
-  box-shadow: 0 25px 45px rgba(29, 54, 58, 0.15);
+  border-radius: 50%; /* makes it perfectly circular */
+  box-shadow: 0 10px 30px rgba(29, 54, 58, 0.1); /* softer shadow */
+  object-fit: cover; /* ensures the image fills the circle nicely */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* subtle hover animation */
+}
+
+/*  gentle hover effect */
+.profile_photo img:hover {
+  transform: scale(1.05); /* slight zoom */
+  box-shadow: 0 15px 40px rgba(29, 54, 58, 0.15);
 }
 
 /* =========================
@@ -427,4 +437,122 @@ SKILLS ICONS
 .devIcons span img:hover,
 .backendIcons span img:hover {
   transform: scale(1.2);
+}
+.my-skills {
+  text-align: center;
+  font-size: 48px;
+  padding: -10px 10px;
+  border-top: 80px;
+}
+/*==============
+ HOMEPAGE BUTTONS 
+ ================*/
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px; /* space between buttons */
+}
+
+.btn {
+  padding: 10px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Primary button - View Projects */
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: var(--white);
+  border: 2px solid var(--accent-gold);
+}
+
+.btn-primary:hover {
+  background-color: var(--white);
+  color: var(--accent-gold);
+  box-shadow: 0 4px 15px rgba(169, 135, 65, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Secondary button - Download CV */
+.btn-secondary {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  border: 2px solid var(--primary-dark);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary-dark);
+  box-shadow: 0 4px 15px rgba(29, 54, 58, 0.4);
+  transform: translateY(-2px);
+}
+/* ==============
+FEATURED PROJECTS
+==============*/
+.featured-projects {
+  padding: 4rem 2rem;
+  background-color: var(--bg-soft);
+  text-align: center;
+}
+
+.featured-projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+.projects-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* allows wrap on very small screens */
+}
+
+.project-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1 1 150px; /* grow, shrink, base width */
+  max-width: 400; /* optional to prevent huge cards on large screens */
+  box-shadow: 0 15px 30px rgba(29, 54, 58, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem; /* space between buttons */
+  margin-top: 0.5rem; /* breathing space from the card content above */
+  justify-content: center; /* center buttons horizontally */
+}
+
+.view-all-btn {
+  margin-top: 2rem;
+}
+.featured-projects-wrapper {
+  background-color: var(--bg-soft); /* soft card/section background */
+  padding: 2rem; /* enough padding inside */
+  border-radius: 20px; /* soft rounded corners */
+  border-left: 4px solid var(--accent-gold); /* consistent accent style */
+  margin-top: 3rem; /* space from the previous section (skills) */
 }
