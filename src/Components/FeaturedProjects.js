@@ -1,7 +1,7 @@
 import React from "react";
 import weatherApp from "../images/weatherapp.png";
-import littleLemon from "../images/weatherapp.png";
-import calculatorApp from "../images/weatherapp.png";
+import littleLemon from "../images/little lemon restaurant.png";
+import calculatorApp from "../images/calculator.jpg";
 import "../App.css";
 
 function FeaturedProjects() {
@@ -9,18 +9,10 @@ function FeaturedProjects() {
     {
       name: "React Weather App",
       image: weatherApp,
-      demo: "#", // replace with your live demo link
-      repo: "#", // replace with GitHub repo link
+      demo: "https://louisereact.netlify.app/",
+      repo: "https://github.com/Miss-Louisa88/my-react-weather-app",
       description:
         "A responsive weather app using React that fetches real-time data from an API.",
-    },
-    {
-      name: "Little Lemon Restaurant App",
-      image: littleLemon,
-      demo: "#",
-      repo: "#",
-      description:
-        "A restaurant reservation and menu app built with React and Bootstrap.",
     },
     {
       name: "Calculator App",
@@ -29,6 +21,14 @@ function FeaturedProjects() {
       repo: "#",
       description:
         "A simple calculator application demonstrating React state management.",
+    },
+    {
+      name: "Little Lemon Restaurant Booking Landing Page",
+      image: littleLemon,
+      demo: "https://github.com/Miss-Louisa88/Little-Lemon-Project/commits/main/",
+      repo: "https://github.com/Miss-Louisa88/Little-Lemon-Project/commits/main/",
+      description:
+        "A restaurant online reservation and menu app built with React and Bootstrap.",
     },
   ];
 
@@ -63,7 +63,7 @@ function FeaturedProjects() {
         ))}
       </div>
       <div className="view-all-btn">
-        <a href="#all-projects" className="btn btn-primary">
+        <a href="/projects" className="btn btn-primary">
           View All Projects
         </a>
       </div>

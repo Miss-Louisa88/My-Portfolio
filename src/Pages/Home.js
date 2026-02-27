@@ -18,7 +18,7 @@ function Home() {
           </p>
           {/* Buttons section */}
           <div className="hero-buttons">
-            <a href="#projects" className="btn btn-primary">
+            <a href="/projects" className="btn btn-primary">
               View Projects
             </a>
             <a
