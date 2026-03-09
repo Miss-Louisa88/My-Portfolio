@@ -3,16 +3,26 @@ function AboutStory() {
     <section className="about-section">
       <h2>My Journey</h2>
       <p>
-        My journey into software engineering began with frontend development,
-        where I discovered a passion for crafting intuitive interfaces.
+        My path into tech wasn’t traditional — and that’s what makes it
+        powerful. I began my career in research and project analysis, where I
+        developed strong problem-solving skills, attention to detail, and
+        systems thinking. While working on structured evaluations and technical
+        documentation, I discovered something important: I was more excited
+        about building systems than just analyzing them. That realization led me
+        to make a bold pivot into software development.
       </p>
       <p>
-        Curiosity pushed me into backend development, working with Node.js,
-        Express, RESTful APIs, and Firebase to build complete applications.
+        I immersed myself in frontend engineering, learning JavaScript, React,
+        and modern UI/UX principles. What started as curiosity quickly turned
+        into deep commitment. I built projects consistently, strengthened my
+        fundamentals, and developed the discipline to debug, refactor, and
+        improve code independently.
       </p>
       <p>
-        Today, my full-stack perspective allows me to build systems that are
-        elegant on the surface and robust underneath.
+        Over time, I expanded into full-stack development: understanding backend
+        fundamentals, API architecture, database modeling, and cloud concepts.
+        Today, I approach development holistically: not just as UI work, but as
+        scalable system design.
       </p>
     </section>
   );

@@ -1,15 +1,18 @@
 function AboutHero() {
   return (
     <section className="about-section">
-      <h1>
-        Building thoughtful, scalable software that solves real-world problems.
-      </h1>
-      <h2>Full-Stack Software Engineer</h2>
+      <h2>Software Engineer | Frontend & Full-Stack Developer</h2>
       <p>
-        I’m Louise Adera, a results-driven Full-Stack Software Engineer with 4+
-        years of experience building clean, responsive, and user-focused web
-        applications across frontend and backend systems.
+        I build scalable, performance-driven web applications with a focus on
+        clean architecture and thoughtful user experience. My work blends
+        structured engineering thinking with thoughtful design, creating systems
+        that are both functional and intuitive.{" "}
       </p>
+      <ul>
+        <li>🛤️My Journey</li>
+        <li>🐷Experience and Impact</li>
+        <li>🐷How I Work</li>
+      </ul>
     </section>
   );
 }
