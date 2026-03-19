@@ -1,0 +1,142 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: #0b0b0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 20px;
+  color: white;
+}
+
+/* glowing orb background */
+
+.glow-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.6), transparent 70%);
+  filter: blur(120px);
+  top: 10%;
+  left: 20%;
+  animation: floatOrb 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+  from {
+    transform: translate(-50px, -30px);
+  }
+  to {
+    transform: translate(60px, 40px);
+  }
+}
+
+/* floating boxes */
+
+.box {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  animation: floatBox 8s ease-in-out infinite;
+}
+
+.box1 {
+  top: 20%;
+  left: 10%;
+}
+.box2 {
+  top: 70%;
+  left: 20%;
+}
+.box3 {
+  top: 40%;
+  right: 15%;
+}
+.box4 {
+  bottom: 15%;
+  right: 25%;
+}
+
+@keyframes floatBox {
+  0% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-25px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+}
+
+/* hero content */
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+h2 {
+  color: #a98741;
+}
+
+.accent {
+  color: #a98741;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #b4b4c7;
+  margin-bottom: 30px;
+}
+
+/* buttons */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.btn-primary {
+  background: #6366f1;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  border: 1px solid #6366f1;
+  color: #6366f1;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* featured */
+
+.featured p {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: 600;
+  color: #aaa;
+}

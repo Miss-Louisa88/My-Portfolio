@@ -1,11 +1,10 @@
 function AboutSkills() {
   return (
     <div>
-      <h1 className="my-skills">Skills</h1>
+      <h1 className="my-skills">My Skills</h1>
       <section className="about-section two-column">
         <div>
           <h3>Frontend Engineering</h3>
-          <p>React, JavaScript, responsive UI, performance optimization.</p>
           <div className="devIcons">
             <span>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
@@ -32,7 +31,6 @@ function AboutSkills() {
         </div>
         <div>
           <h3>Backend & Systems</h3>
-          <p>Node.js, Express, REST APIs, Firebase, integrations.</p>
           <div className="backendIcons">
             <span>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
@@ -41,7 +39,7 @@ function AboutSkills() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original-wordmark.svg" />
             </span>
             <span>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" />
             </span>
             <span>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />

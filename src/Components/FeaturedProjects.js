@@ -33,7 +33,7 @@ function FeaturedProjects() {
   ];
 
   return (
-    <section className="featured-projects">
+    <section id="projects" className="featured-projects">
       <h2>Featured Projects</h2>
       <div className="projects-grid">
         {projects.map((project) => (
@@ -61,11 +61,6 @@ function FeaturedProjects() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="view-all-btn">
-        <a href="/projects" className="btn btn-primary">
-          View All Projects
-        </a>
       </div>
     </section>
   );

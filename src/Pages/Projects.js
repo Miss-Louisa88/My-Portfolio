@@ -1,10 +1,9 @@
 import Layout from "../Components/Layout";
+import FeaturedProjects from "../Components/FeaturedProjects";
 function MyProjects() {
   return (
     <Layout>
-      <div>
-        <h1>Louisa has three major projects that will interest you</h1>
-      </div>
+      <FeaturedProjects />
     </Layout>
   );
 }

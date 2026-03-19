@@ -2,9 +2,9 @@
    COLORS (PALETTE)
    ========================= */
 :root {
-  --bg-light: #dec3b3; /* Page background */
+  --bg-light: #0b0b0f; /* Page background #dec3b3*/
   --bg-soft: #fbefe9; /* Cards/section background */
-  --accent-gold: #a98741; /* Buttons, borders, highlights */
+  --accent-gold: #a98741; /* Buttons, borders, highlights    */
   --primary-dark: #1d363a; /* Headings, navbar */
   --text-dark: #1d363a; /* Body text */
   --white: #ffffff; /* Contrast for text/buttons */
@@ -36,59 +36,47 @@ body {
    NAVBAR
    ========================= */
 .navbar {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: var(--primary-dark);
-  padding: 16px 32px;
-  border-radius: 18px;
-  margin-bottom: 60px;
+  background: rgba(15, 15, 20, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 12px 28px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
 }
-
-.logo {
-  color: var(--white);
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 28px;
+  align-items: center;
 }
-
 .nav-links a {
-  color: var(--white);
-  padding: 10px 22px;
-  border-radius: 20px;
-  font-weight: 600;
+  position: relative;
+  color: white;
+  font-weight: 500;
   text-decoration: none;
-  transition:
-    transform 0.2s,
-    background-color 0.3s;
+  padding: 8px 14px;
+  transition: all 0.3s ease;
 }
-
 .nav-links a:hover {
-  background-color: #92753b; /* Slightly darker gold */
-  transform: translateY(-2px);
+  color: var(--accent-gold);
+  text-shadow:
+    0 0 8px rgba(99, 102, 241, 0.8),
+    0 0 18px rgba(99, 102, 241, 0.6);
 }
-
-header .btn {
-  background-color: var(--white);
-  color: var(--primary-dark);
-  font-weight: 600;
-  padding: 10px 22px;
-  border-radius: 20px;
-  border: 2px solid var(--accent-gold);
-  cursor: pointer;
-  transition:
-    transform 0.2s,
-    background-color 0.3s;
+.nav-links .active {
+  color: var(--accent-gold);
+  text-shadow:
+    0 0 10px rgba(99, 102, 241, 1),
+    0 0 25px rgba(99, 102, 241, 0.9);
 }
-
-header .btn:hover {
-  background-color: var(--accent-gold);
-  color: var(--white);
-  transform: translateY(-2px);
+.navbar {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
 }
 
 /* =========================
@@ -163,50 +151,6 @@ header .btn:hover {
 .profile_photo img:hover {
   transform: scale(1.05); /* slight zoom */
   box-shadow: 0 15px 40px rgba(29, 54, 58, 0.15);
-}
-
-/* =========================
-   SKILLS SECTION
-   ========================= */
-.skills {
-  background-color: var(--bg-soft);
-  padding: 50px;
-  border-radius: 28px;
-  margin-bottom: 80px;
-}
-
-.skills h2 {
-  margin-bottom: 10px;
-}
-
-.skills p {
-  margin-bottom: 30px;
-}
-
-/* Skills grid */
-.skills-grid {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.skill-card {
-  background-color: var(--white);
-  flex: 1 1 calc(33% - 16px);
-  min-width: 220px;
-  padding: 24px;
-  border-radius: 18px;
-  border-left: 4px solid var(--accent-gold);
-  box-shadow: 0 15px 30px rgba(29, 54, 58, 0.08);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 25px 45px rgba(29, 54, 58, 0.15);
 }
 
 /* =========================
@@ -296,23 +240,16 @@ header .btn:hover {
    ABOUT SECTIONS (REUSABLE)
    ===================================================== */
 
-.about-section {
-  background-color: var(--bg-soft);
-  padding: 60px;
-  border-radius: 28px;
-  box-shadow: 0 15px 30px rgba(29, 54, 58, 0.08);
-}
-
 /* Headings */
 .about-section h1 {
   font-size: 2.8rem;
-  color: var(--primary-dark);
+  color: var(--accent-gold);
   margin-bottom: 12px;
 }
 
 .about-section h2 {
   font-size: 2rem;
-  color: var(--primary-dark);
+  color: var(--accent-gold);
   margin-bottom: 16px;
 }
 
@@ -340,10 +277,17 @@ header .btn:hover {
 }
 
 .two-column div {
-  background-color: white;
+  background-color: #0b0b0f;
   padding: 30px;
   border-radius: 20px;
   border-left: 4px solid var(--accent-gold);
+  border: 1px solid rgba(46, 46, 48, 0.6);
+  box-shadow:
+    0 1px 1px rgba(48, 46, 46, 0.11),
+    0 2px 2px rgba(36, 35, 35, 0.11),
+    0 4px 4px rgba(32, 32, 32, 0.11),
+    0 8px 8px rgba(46, 45, 45, 0.11),
+    0 16px 16px rgba(53, 52, 52, 0.11);
 }
 
 /* =====================================================
@@ -404,18 +348,19 @@ header .btn:hover {
 /*===============
 SKILLS ICONS
 ============= */
-/* Container for frontend icons */
-/* Container for icons (frontend or backend) */
 .devIcons,
 .backendIcons {
-  display: flex; /* horizontal row */
-  flex-direction: row; /* default, can skip but explicit */
-  align-items: center; /* vertically center icons */
-  gap: 12px; /* space between each icon */
-  margin-top: 8px; /* optional spacing from paragraph */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.express {
+  color: #a98741;
+  border: 5px;
 }
 
-/* Each icon inside a span */
 .devIcons span,
 .backendIcons span {
   display: flex;
@@ -423,16 +368,13 @@ SKILLS ICONS
   align-items: center;
 }
 
-/* Set all icons to same small size */
 .devIcons span img,
 .backendIcons span img {
-  width: 46px; /* small neat size */
+  width: 46px;
   height: 40px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
-
-/* Optional: hover effect */
 .devIcons span img:hover,
 .backendIcons span img:hover {
   transform: scale(1.2);
@@ -440,9 +382,11 @@ SKILLS ICONS
 .my-skills {
   text-align: center;
   font-size: 48px;
-  padding: -10px 10px;
-  border-top: 80px;
+  padding: -40px 10px;
+  border-top: 20px;
+  color: var(--white);
 }
+
 /*==============
  HOMEPAGE BUTTONS 
  ================*/
@@ -622,4 +566,51 @@ FEATURED PROJECTS
 .contact-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+/*   About.js Styling */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.about-left {
+  flex: 1;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.about-right {
+  flex: 1;
+}
+
+.about-right ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.about-right li {
+  margin-bottom: 10px;
+}
+.about-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.about-section {
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+}
+html {
+  scroll-behavior: smooth;
 }
