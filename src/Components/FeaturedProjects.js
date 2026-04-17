@@ -3,6 +3,7 @@ import weatherApp from "../images/weatherapp.png";
 import littleLemon from "../images/little lemon restaurant.png";
 import calculatorApp from "../images/calculator.jpg";
 import "../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function FeaturedProjects() {
   const projects = [
@@ -33,31 +34,36 @@ function FeaturedProjects() {
   ];
 
   return (
-    <section id="projects" className="featured-projects">
+    <section id="projects" className="featured-projects container">
       <h2>Featured Projects</h2>
-      <div className="projects-grid">
+
+      <div className="row g-4">
         {projects.map((project) => (
-          <div key={project.name} className="project-card">
-            <img src={project.image} alt={project.name} />
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-            <div className="project-buttons">
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                Live
-              </a>
-              <a
-                href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                GitHub
-              </a>
+          <div key={project.name} className="col-12 col-md-6 col-lg-4">
+            <div className="project-card h-100">
+              <img src={project.image} alt={project.name} />
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+
+              <div className="project-buttons">
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Live
+                </a>
+
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         ))}

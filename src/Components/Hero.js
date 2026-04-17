@@ -6,7 +6,6 @@ function Hero() {
     <section className="hero">
       {/* glowing background orb */}
       <div className="glow-orb"></div>
-
       {/* floating boxes */}
       <div className="box box1"></div>
       <div className="box box2"></div>

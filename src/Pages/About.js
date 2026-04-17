@@ -6,13 +6,12 @@ import profile from "../images/LuiDev.jpg";
 function About() {
   return (
     <div className="about-page">
-      <section id="about" className="about-section">
-        <h1 className="about-heading">About Me</h1>
-
-        <div className="about-grid">
+      <h1 className="about-heading">About Me</h1>
+      <section id="about" className="about-section container">
+        <div className="row align-items-center g-5">
           {/* LEFT */}
           <motion.div
-            className="about-left"
+            className="col-12 col-lg-4 about-left"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -27,8 +26,8 @@ function About() {
             </p>
           </motion.div>
 
-          {/* MIDDLE IMAGE */}
-          <div className="about-image">
+          {/* IMAGE */}
+          <div className="col-12 col-lg-4 text-center about-image">
             <div className="image-glow"></div>
             <div className="image-ring"></div>
             <img src={profile} alt="Louise Adera" />
@@ -36,7 +35,7 @@ function About() {
 
           {/* RIGHT */}
           <motion.div
-            className="about-right"
+            className="col-12 col-lg-4 about-right"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -53,7 +52,7 @@ function About() {
             </ul>
 
             <a
-              href="/Louise_Adera_Resume.pdf"
+              href="/Louise Adera_Software Engineer Resume.pdf"
               download
               className="btn-secondary"
             >

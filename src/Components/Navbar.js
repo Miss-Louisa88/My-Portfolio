@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
 function Navbar() {
@@ -27,36 +28,56 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className="navbar">
-      <nav className="nav-links">
-        <Link className={activeSection === "home" ? "active" : ""} to="/">
-          Home
-        </Link>
-
-        <a href="#about" className={activeSection === "about" ? "active" : ""}>
-          About
-        </a>
-
-        <a
-          href="#projects"
-          className={activeSection === "projects" ? "active" : ""}
+    <nav className="navbar custom-navbar navbar-expand-lg">
+      <div className="container-fluid">
+        {/* TOGGLER (hamburger) */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
         >
-          Projects
-        </a>
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        <a
-          href="#contact"
-          className={activeSection === "contact" ? "active" : ""}
+        {/* NAV LINKS */}
+        <div
+          className="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
         >
-          Contact
-        </a>
-      </nav>
-    </header>
+          <div className="nav-links">
+            <Link className={activeSection === "home" ? "active" : ""} to="/">
+              Home
+            </Link>
+
+            <a
+              href="#about"
+              className={activeSection === "about" ? "active" : ""}
+            >
+              About
+            </a>
+
+            <a
+              href="#projects"
+              className={activeSection === "projects" ? "active" : ""}
+            >
+              Projects
+            </a>
+
+            <a
+              href="#contact"
+              className={activeSection === "contact" ? "active" : ""}
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
 
