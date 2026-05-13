@@ -1,7 +1,7 @@
 import React from "react";
 import weatherApp from "../images/weatherapp.png";
 import littleLemon from "../images/little lemon restaurant.png";
-import calculatorApp from "../images/calculator.jpg";
+import calculatorApp from "../images/translation.png";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -16,12 +16,12 @@ function FeaturedProjects() {
         "A responsive weather app using React that fetches real-time data from an API.",
     },
     {
-      name: "Calculator App",
+      name: "E-Commerce Website",
       image: calculatorApp,
-      demo: "#",
-      repo: "#",
+      demo: "https://sanctuarytranslation.com/",
+      repo: "https://sanctuarytranslation.com/",
       description:
-        "A simple calculator application demonstrating React state management.",
+        "A simple e-commerce website for a Translation and Interpretation company",
     },
     {
       name: "Little Lemon Restaurant Booking Landing Page",
